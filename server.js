@@ -1,13 +1,21 @@
+const express = require("express");
+const http = require("http");
 const WebSocket = require("ws");
 const { categories } = require("./quiz-data");
 
-const wss = new WebSocket.Server({ port: 4000 });
+const app = express();
+const PORT = process.env.PORT || 4000;
 
-console.log("WebSocket server started on ws://localhost:4000");
+// Health check endpoint for Render
+app.get("/", (req, res) => {
+  res.send("Brain Buzz WebSocket server is running 🚀");
+});
+
+const server = http.createServer(app);
+const wss = new WebSocket.Server({ server });
 
 // Rooms state: Map<roomId, RoomState>
 const rooms = new Map();
-
 const DEFAULT_TIMEOUT = 10;
 
 // Helper: generate random room ID
@@ -28,8 +36,8 @@ function getOrCreateRoom(roomId, category) {
   );
   if (!rooms.has(roomId)) {
     rooms.set(roomId, {
-      players: new Map(), // Map<playerId, {id, name, score, correctAnswers, connected, completed}>
-      quizCategory: categoryFound || categories[0], // Could be dynamic per room
+      players: new Map(),
+      quizCategory: categoryFound || categories[0],
       currentQuestionIndex: 0,
       questionTimer: DEFAULT_TIMEOUT,
       interval: null,
@@ -64,7 +72,6 @@ function getQuizState(room) {
 function startTimerForRoom(roomId) {
   const room = getOrCreateRoom(roomId);
 
-  // Clear any existing interval first
   if (room.interval) {
     clearInterval(room.interval);
     room.interval = null;
@@ -74,41 +81,31 @@ function startTimerForRoom(roomId) {
     room.questionTimer--;
 
     if (room.questionTimer < 0) {
-      // Stop the current interval before waiting
       clearInterval(room.interval);
       room.interval = null;
-
       room.currentQuestionIndex++;
 
       if (room.currentQuestionIndex >= room.quizCategory.questions.length) {
         broadcastToRoom(roomId, {
           type: "quizOver",
-          state: {
-            leaderboard: Array.from(room.players.values()),
-          },
+          state: { leaderboard: Array.from(room.players.values()) },
         });
-
         resetQuizForRoom(roomId);
         return;
       }
 
-      // Wait for 3 seconds before starting next question
       setTimeout(() => {
         room.questionTimer = DEFAULT_TIMEOUT;
         broadcastToRoom(roomId, {
           type: "quizStateUpdate",
           state: getQuizState(room),
         });
-
-        // Restart the timer interval after delay
         room.interval = startTimerForRoom(roomId);
       }, 3000);
     } else {
       broadcastToRoom(roomId, {
         type: "timerUpdate",
-        state: {
-          timer: room.questionTimer,
-        },
+        state: { timer: room.questionTimer },
       });
     }
   }, 1000);
@@ -117,7 +114,7 @@ function startTimerForRoom(roomId) {
 }
 
 function resetQuizForRoom(roomId) {
-  console.log('reset-called!')
+  console.log("reset-called!");
   const room = getOrCreateRoom(roomId);
   clearInterval(room.interval);
   room.interval = null;
@@ -125,7 +122,6 @@ function resetQuizForRoom(roomId) {
   room.questionTimer = DEFAULT_TIMEOUT;
   room.quizStarted = false;
 
-  // Reset player scores and flags
   room.players.forEach((player) => {
     player.score = 0;
     player.correctAnswers = 0;
@@ -166,7 +162,6 @@ wss.on("connection", (ws) => {
             totalQuestions: categoryFound.questions.length || 0,
           });
 
-          // Send room info back if new roomId was generated
           if (!roomId) {
             ws.send(
               JSON.stringify({
@@ -178,11 +173,8 @@ wss.on("connection", (ws) => {
 
           broadcastToRoom(ws.roomId, {
             type: "leaderboardUpdate",
-            state: {
-              leaderboard: Array.from(room.players.values()),
-            },
+            state: { leaderboard: Array.from(room.players.values()) },
           });
-
           break;
         }
 
@@ -191,7 +183,6 @@ wss.on("connection", (ws) => {
           if (!room) return;
 
           if (room.quizStarted) {
-            // Already started, ignore or resend state
             ws.send(
               JSON.stringify({
                 type: "quizStart",
@@ -233,9 +224,7 @@ wss.on("connection", (ws) => {
 
           broadcastToRoom(ws.roomId, {
             type: "leaderboardUpdate",
-            state: {
-              leaderboard: Array.from(room.players.values()),
-            },
+            state: { leaderboard: Array.from(room.players.values()) },
           });
           break;
         }
@@ -251,9 +240,7 @@ wss.on("connection", (ws) => {
 
             broadcastToRoom(ws.roomId, {
               type: "leaderboardUpdate",
-              state: {
-                leaderboard: Array.from(room.players.values()),
-              },
+              state: { leaderboard: Array.from(room.players.values()) },
             });
 
             if ([...room.players.values()].every((p) => !p.connected)) {
@@ -279,9 +266,7 @@ wss.on("connection", (ws) => {
 
       broadcastToRoom(ws.roomId, {
         type: "leaderboardUpdate",
-        state: {
-          leaderboard: Array.from(room.players.values()),
-        },
+        state: { leaderboard: Array.from(room.players.values()) },
       });
 
       if ([...room.players.values()].every((p) => !p.connected)) {
@@ -290,4 +275,8 @@ wss.on("connection", (ws) => {
     }
     console.log(`Client disconnected: ${id}`);
   });
+});
+
+server.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
