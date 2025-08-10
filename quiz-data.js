@@ -45,7 +45,7 @@ module.exports = {
           },
           {
             questionText: "Who gets a turkey stuck on their head?",
-            options: ["Rachel", "Monica", "Joey", "Phoebe"],
+            options: ["Rachel", "Monica", "Janice", "Phoebe"],
             correctAnswerIndex: 1
           },
           {
@@ -189,7 +189,63 @@ module.exports = {
             correctAnswerIndex: 0
           }
         ]
+      },
+      {
+        categoryName: "animals",
+        questions: [
+          {
+            questionText: "Which animal is known as the 'King of the Jungle'?",
+            options: ["Tiger", "Lion", "Elephant", "Leopard"],
+            correctAnswerIndex: 1
+          },
+          {
+            questionText: "Which is the fastest land animal?",
+            options: ["Cheetah", "Horse", "Leopard", "Ostrich"],
+            correctAnswerIndex: 0
+          },
+          {
+            questionText: "Which mammal is capable of true flight?",
+            options: ["Flying squirrel", "Bat", "Eagle", "Sugar glider"],
+            correctAnswerIndex: 1
+          },
+          {
+            questionText: "What is the largest species of shark?",
+            options: ["Great White Shark", "Hammerhead Shark", "Whale Shark", "Tiger Shark"],
+            correctAnswerIndex: 2
+          },
+          {
+            questionText: "Which animal is known for changing its skin color?",
+            options: ["Octopus", "Chameleon", "Squid", "Gecko"],
+            correctAnswerIndex: 1
+          },
+          {
+            questionText: "Which bird is a universal symbol of peace?",
+            options: ["Crow", "Pigeon", "Dove", "Swan"],
+            correctAnswerIndex: 2
+          },
+          {
+            questionText: "What is the largest land animal?",
+            options: ["Hippopotamus", "African Elephant", "White Rhino", "Giraffe"],
+            correctAnswerIndex: 1
+          },
+          {
+            questionText: "Which animal has the longest lifespan?",
+            options: ["Blue whale", "Galápagos tortoise", "Elephant", "Parrot"],
+            correctAnswerIndex: 1
+          },
+          {
+            questionText: "What is a group of lions called?",
+            options: ["Herd", "Pack", "Pride", "Troop"],
+            correctAnswerIndex: 2
+          },
+          {
+            questionText: "Which animal can sleep for up to 22 hours a day?",
+            options: ["Sloth", "Koala", "Cat", "Opossum"],
+            correctAnswerIndex: 1
+          }
+        ]
       }
+      
     ]
   };
   
