@@ -270,5 +270,110 @@ module.exports = {
         },
       ],
     },
+    {
+      categoryName: "geography",
+      questions: [
+        {
+          questionText: "What is the largest continent in the world?",
+          options: ["Africa", "Asia", "Europe", "North America"],
+          correctAnswerIndex: 1
+        },
+        {
+          questionText: "Which is the longest river in the world?",
+          options: ["Amazon", "Nile", "Ganga", "Yangtze"],
+          correctAnswerIndex: 1
+        },
+        {
+          questionText: "Which country is called the 'Land of the Rising Sun'?",
+          options: ["China", "Japan", "Thailand", "Korea"],
+          correctAnswerIndex: 1
+        },
+        {
+          questionText: "Which is the largest ocean on Earth?",
+          options: ["Atlantic Ocean", "Indian Ocean", "Pacific Ocean", "Arctic Ocean"],
+          correctAnswerIndex: 2
+        },
+        {
+          questionText: "Which desert is the largest hot desert in the world?",
+          options: ["Thar Desert", "Kalahari Desert", "Sahara Desert", "Gobi Desert"],
+          correctAnswerIndex: 2
+        },
+        {
+          questionText: "What is the capital of France?",
+          options: ["Berlin", "Paris", "Rome", "Madrid"],
+          correctAnswerIndex: 1
+        },
+        {
+          questionText: "Mount Everest lies in which mountain range?",
+          options: ["Andes", "Rockies", "Himalayas", "Alps"],
+          correctAnswerIndex: 2
+        },
+        {
+          questionText: "Which continent is known as the 'Dark Continent'?",
+          options: ["South America", "Africa", "Australia", "Europe"],
+          correctAnswerIndex: 1
+        },
+        {
+          questionText: "Which is the smallest country in the world?",
+          options: ["Vatican City", "Monaco", "Malta", "San Marino"],
+          correctAnswerIndex: 0
+        },
+        {
+          questionText: "Which country has the Great Wall?",
+          options: ["India", "Japan", "China", "Mongolia"],
+          correctAnswerIndex: 2
+        },
+        {
+          questionText: "What is the capital of India?",
+          options: ["Mumbai", "Delhi", "Kolkata", "Chennai"],
+          correctAnswerIndex: 1
+        },
+        {
+          questionText: "Which is the coldest place on Earth?",
+          options: ["Greenland", "Antarctica", "Iceland", "Siberia"],
+          correctAnswerIndex: 1
+        },
+        {
+          questionText: "Which is the largest island in the world?",
+          options: ["Madagascar", "Greenland", "New Guinea", "Borneo"],
+          correctAnswerIndex: 1
+        },
+        {
+          questionText: "Which country is both in Asia and Europe?",
+          options: ["Russia", "Turkey", "Kazakhstan", "All of these"],
+          correctAnswerIndex: 3
+        },
+        {
+          questionText: "Which is the capital city of Australia?",
+          options: ["Sydney", "Melbourne", "Canberra", "Perth"],
+          correctAnswerIndex: 2
+        },
+        {
+          questionText: "Which river flows through Egypt?",
+          options: ["Amazon", "Nile", "Mississippi", "Danube"],
+          correctAnswerIndex: 1
+        },
+        {
+          questionText: "Which is the highest waterfall in the world?",
+          options: ["Niagara Falls", "Victoria Falls", "Angel Falls", "Iguazu Falls"],
+          correctAnswerIndex: 2
+        },
+        {
+          questionText: "Which ocean is on the east coast of India?",
+          options: ["Pacific Ocean", "Indian Ocean", "Atlantic Ocean", "Arctic Ocean"],
+          correctAnswerIndex: 1
+        },
+        {
+          questionText: "Which country is famous for the pyramids?",
+          options: ["Greece", "Mexico", "Egypt", "Peru"],
+          correctAnswerIndex: 2
+        },
+        {
+          questionText: "Which is the second-largest country in the world by area?",
+          options: ["China", "Canada", "USA", "Russia"],
+          correctAnswerIndex: 1
+        }
+      ]
+    }    
   ],
 };
