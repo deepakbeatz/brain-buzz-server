@@ -19,7 +19,7 @@ const rooms = new Map();
 const DEFAULT_TIMEOUT = 10;
 
 // Helper: generate random room ID
-function generateRoomId(length = 10) {
+function generateRoomId(length = 3) {
   const chars =
     "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
   let result = "";

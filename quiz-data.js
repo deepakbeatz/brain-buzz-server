@@ -479,6 +479,111 @@ module.exports = {
           correctAnswerIndex: 0,
         },
       ],
-    }       
+    },
+    {
+      "categoryName": "ipl",
+      "questions": [
+        {
+          "questionText": "Which team won the first IPL in 2008?",
+          "options": ["Chennai Super Kings", "Rajasthan Royals", "Mumbai Indians", "Kolkata Knight Riders"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "questionText": "Who is the highest run scorer in IPL history?",
+          "options": ["Virat Kohli", "Rohit Sharma", "Suresh Raina", "David Warner"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "questionText": "Which player has taken the most wickets in IPL history?",
+          "options": ["Lasith Malinga", "Dwayne Bravo", "Amit Mishra", "Yuzvendra Chahal"],
+          "correctAnswerIndex": 3
+        },
+        {
+          "questionText": "Which team has won the most IPL titles?",
+          "options": ["Chennai Super Kings", "Mumbai Indians", "Kolkata Knight Riders", "Rajasthan Royals"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "questionText": "Who scored the fastest century in IPL history?",
+          "options": ["Chris Gayle", "AB de Villiers", "David Warner", "KL Rahul"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "questionText": "Which Indian bowler has the most hat-tricks in IPL?",
+          "options": ["Amit Mishra", "Yuvraj Singh", "Harbhajan Singh", "Praveen Kumar"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "questionText": "Who scored the first century in IPL history?",
+          "options": ["Brendon McCullum", "Adam Gilchrist", "Suresh Raina", "Chris Gayle"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "questionText": "Which franchise is also called 'Men in Yellow'?",
+          "options": ["Mumbai Indians", "Kolkata Knight Riders", "Chennai Super Kings", "Sunrisers Hyderabad"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "questionText": "Who was the first uncapped Indian player to score an IPL century?",
+          "options": ["Manish Pandey", "Sanju Samson", "Ishan Kishan", "Ruturaj Gaikwad"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "questionText": "Which stadium hosted the first ever IPL match in 2008?",
+          "options": ["M. A. Chidambaram Stadium", "Eden Gardens", "Wankhede Stadium", "Chinnaswamy Stadium"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "questionText": "Which player is known as 'Mr. IPL'?",
+          "options": ["Virat Kohli", "Suresh Raina", "MS Dhoni", "Rohit Sharma"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "questionText": "Which team did Sunrisers Hyderabad replace in 2013?",
+          "options": ["Deccan Chargers", "Gujarat Lions", "Rising Pune Supergiant", "Kochi Tuskers Kerala"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "questionText": "Who has hit the most sixes in IPL history?",
+          "options": ["AB de Villiers", "Chris Gayle", "Rohit Sharma", "MS Dhoni"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "questionText": "Which player has won the most IPL trophies as captain?",
+          "options": ["Rohit Sharma", "MS Dhoni", "Gautam Gambhir", "David Warner"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "questionText": "Which team won IPL 2022?",
+          "options": ["Gujarat Titans", "Rajasthan Royals", "Mumbai Indians", "Chennai Super Kings"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "questionText": "Who was the first Orange Cap winner in IPL?",
+          "options": ["Shaun Marsh", "Chris Gayle", "Virat Kohli", "Sachin Tendulkar"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "questionText": "Which player bowled the first ball in IPL history?",
+          "options": ["Zaheer Khan", "Praveen Kumar", "Sreesanth", "Shane Warne"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "questionText": "Who scored 175* in IPL, the highest individual score?",
+          "options": ["Chris Gayle", "AB de Villiers", "Brendon McCullum", "David Warner"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "questionText": "Which player has played the most matches in IPL history?",
+          "options": ["MS Dhoni", "Rohit Sharma", "Virat Kohli", "Dinesh Karthik"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "questionText": "Who was the first Indian to win an MVP award in IPL?",
+          "options": ["Sachin Tendulkar", "Virat Kohli", "Rohit Sharma", "Harbhajan Singh"],
+          "correctAnswerIndex": 0
+        }
+      ]
+    }         
   ],
 };
