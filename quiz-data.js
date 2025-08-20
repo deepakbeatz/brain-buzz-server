@@ -374,6 +374,111 @@ module.exports = {
           correctAnswerIndex: 1
         }
       ]
-    }    
+    },
+    {
+      categoryName: "trivia",
+      questions: [
+        {
+          questionText: "Who is known as the Father of the Indian Constitution?",
+          options: ["Mahatma Gandhi", "Jawaharlal Nehru", "B.R. Ambedkar", "Sardar Patel"],
+          correctAnswerIndex: 2,
+        },
+        {
+          questionText: "Which is the smallest bone in the human body?",
+          options: ["Stapes", "Femur", "Ulna", "Radius"],
+          correctAnswerIndex: 0,
+        },
+        {
+          questionText: "What is the chemical symbol of Gold?",
+          options: ["Au", "Ag", "Gd", "Go"],
+          correctAnswerIndex: 0,
+        },
+        {
+          questionText: "Who was the first woman to win a Nobel Prize?",
+          options: ["Marie Curie", "Mother Teresa", "Rosalind Franklin", "Indira Gandhi"],
+          correctAnswerIndex: 0,
+        },
+        {
+          questionText: "Which planet is called the 'Morning Star' or 'Evening Star'?",
+          options: ["Mars", "Venus", "Jupiter", "Mercury"],
+          correctAnswerIndex: 1,
+        },
+        {
+          questionText: "In which year did the French Revolution begin?",
+          options: ["1776", "1789", "1815", "1848"],
+          correctAnswerIndex: 1,
+        },
+        {
+          questionText: "Which Indian scientist won the Nobel Prize for Physics in 1930?",
+          options: ["C.V. Raman", "Homi Bhabha", "Vikram Sarabhai", "A.P.J. Abdul Kalam"],
+          correctAnswerIndex: 0,
+        },
+        {
+          questionText: "Who painted the famous Mona Lisa?",
+          options: ["Leonardo da Vinci", "Pablo Picasso", "Vincent van Gogh", "Michelangelo"],
+          correctAnswerIndex: 0,
+        },
+        {
+          questionText: "Which organelle is known as the powerhouse of the cell?",
+          options: ["Mitochondria", "Nucleus", "Ribosome", "Chloroplast"],
+          correctAnswerIndex: 0,
+        },
+        {
+          questionText: "Which Indian city is known as the 'Silicon Valley of India'?",
+          options: ["Hyderabad", "Bengaluru", "Pune", "Chennai"],
+          correctAnswerIndex: 1,
+        },
+        {
+          questionText: "Who is the author of 'The Origin of Species'?",
+          options: ["Charles Darwin", "Gregor Mendel", "Isaac Newton", "Albert Einstein"],
+          correctAnswerIndex: 0,
+        },
+        {
+          questionText: "What is the capital of Canada?",
+          options: ["Toronto", "Vancouver", "Ottawa", "Montreal"],
+          correctAnswerIndex: 2,
+        },
+        {
+          questionText: "Which country hosted the 2020 Summer Olympics (held in 2021 due to COVID-19)?",
+          options: ["China", "Japan", "Brazil", "UK"],
+          correctAnswerIndex: 1,
+        },
+        {
+          questionText: "The Great Wall of China was primarily built to protect against invasions from which group?",
+          options: ["Mongols", "Huns", "Romans", "Turks"],
+          correctAnswerIndex: 0,
+        },
+        {
+          questionText: "What is the SI unit of Force?",
+          options: ["Joule", "Pascal", "Newton", "Watt"],
+          correctAnswerIndex: 2,
+        },
+        {
+          questionText: "Who discovered Penicillin?",
+          options: ["Alexander Fleming", "Louis Pasteur", "Joseph Lister", "Robert Koch"],
+          correctAnswerIndex: 0,
+        },
+        {
+          questionText: "Which country is known as the Land of the Rising Sun?",
+          options: ["China", "Japan", "Thailand", "Korea"],
+          correctAnswerIndex: 1,
+        },
+        {
+          questionText: "Which Indian mathematician is known for contributions to number theory and infinite series?",
+          options: ["Srinivasa Ramanujan", "Aryabhata", "Brahmagupta", "Bhaskaracharya"],
+          correctAnswerIndex: 0,
+        },
+        {
+          questionText: "Which treaty ended World War I?",
+          options: ["Treaty of Paris", "Treaty of Versailles", "Treaty of Ghent", "Treaty of Vienna"],
+          correctAnswerIndex: 1,
+        },
+        {
+          questionText: "What is the hardest natural substance on Earth?",
+          options: ["Diamond", "Graphite", "Quartz", "Corundum"],
+          correctAnswerIndex: 0,
+        },
+      ],
+    }       
   ],
 };
