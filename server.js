@@ -6,19 +6,16 @@ const { categories } = require("./quiz-data");
 const app = express();
 const PORT = process.env.PORT || 4000;
 
-// Health check endpoint for Render
 app.get("/", (req, res) => {
-  res.send("Brain Buzz WebSocket server is running 🚀");
+  res.send("Brain Buzz WebSocket server is running");
 });
 
 const server = http.createServer(app);
 const wss = new WebSocket.Server({ server });
 
-// Rooms state: Map<roomId, RoomState>
 const rooms = new Map();
 const DEFAULT_TIMEOUT = 10;
 
-// Helper: generate random room ID
 function generateRoomId(length = 3) {
   const chars =
     "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -29,7 +26,6 @@ function generateRoomId(length = 3) {
   return result;
 }
 
-// Get existing or create new room state
 function getOrCreateRoom(roomId, category) {
   const categoryFound = categories.find(
     (categoryEntry) => categoryEntry.categoryName === category
